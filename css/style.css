@@ -14,25 +14,43 @@ img{
 section{
     max-width: 1000px;
     margin: 0 auto;
+    padding: 50px;
     display: flex;
     justify-content: center;
 }
 
-/* .carosello{
+.carosello{
     position: relative;
-} */
+}
 
  /*****carosello*******/
 .photo img{
-    width: 600px;
     aspect-ratio: 16/9;
 	object-fit: cover;
 	object-position: center;
 }
 
-/*.carosello .photo{
+.photo .description{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 50%;
+    color: white;
+    background-color: #00000073;
+    line-height: 22px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.description>h2{
+    margin-bottom: 20px;
+}
+
+.carosello .photo{
     display: none;
-}*/
+}
 
 .carosello .active{
     display: block;
