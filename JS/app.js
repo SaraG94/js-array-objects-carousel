@@ -23,23 +23,31 @@ const images = [
 ];
 console.log(images);
 
-// //recupere carosello 
-// const carosello =document.getElementById('carosello')
-// console.log(carosello)
+//recupere carosello 
+const carosello =document.getElementById('carosello')
+console.log(carosello)
 
-// //ciclo img
-// for (let i = 0; i < slidesCarosello.length; i++ ){
-//     const img = slidesCarosello[i] 
-//     console.log(img)
+//ciclo imges
+for (let i = 0; i < images.length; i++ ){
+    const card = images[i] 
+    console.log(card)
+
+    //stampo contenuto
+    const{image, title, text}=card;    
+    console.log(image, title, text);
     
-//     //creo elemento html
-//     const htmlPhoto=`
-//     <div class="photo">
-//         <img src="${img}" alt="">
-//     </div>
-//     `
-//     carosello.innerHTML += htmlPhoto
-// }
+    //creo elemento html
+    const htmlPhoto=`
+    <div class="photo">
+        <img src="${image}" alt="">
+        <div class="description">
+            <h2>${title}</h2>
+            <p>${text}</p>
+        </div>
+    </div>
+    `
+    carosello.innerHTML += htmlPhoto
+}
 
 // //prendere da html arrow
 // const leftArrow = document.getElementById('left')
