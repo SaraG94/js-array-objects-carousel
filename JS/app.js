@@ -21,7 +21,6 @@ const images = [
         text: "Marvel's Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay."
     }
 ];
-console.log(images);
 
 //recupere carosello 
 const carosello =document.getElementById('carosello')
@@ -30,7 +29,6 @@ console.log(carosello)
 //ciclo imges
 for (let i = 0; i < images.length; i++ ){
     const card = images[i] 
-    console.log(card)
 
     //stampo contenuto
     const{image, title, text}=card;    
@@ -46,19 +44,15 @@ for (let i = 0; i < images.length; i++ ){
         </div>
     </div>
     `
-    carosello.innerHTML += htmlPhoto
+    carosello.innerHTML += htmlPhoto;
 }
 
-//prendere da html arrow
-const leftArrow = document.getElementById('left')
-console.log(leftArrow)
+//prendere da html arrow e photo
+const leftArrow = document.getElementById('left');
 
-const rightArrow = document.getElementById('right')
-console.log(rightArrow)
+const rightArrow = document.getElementById('right');
 
-//prendere photo da html
-const photoCarosello = document.getElementsByClassName('photo')
-// console.log(photoCarosello)
+const photoCarosello = document.getElementsByClassName('photo');
 
 //indicephoto
 let indicePhotoAttiva = 0
@@ -66,14 +60,13 @@ let indicePhotoAttiva = 0
 photoCarosello[indicePhotoAttiva].classList.add('active')
 
 //ascoltare evento click su arrow
-
 rightArrow.addEventListener('click', function () {
-	console.log('22ciaooo')
+
     // al click aggiungere e rimuovere classe active
 
     if(indicePhotoAttiva<(photoCarosello.length-1)){
         let photoCorrente = photoCarosello[indicePhotoAttiva]
-        // rimuovere classe active
+
         photoCorrente.classList.remove('active')
 
         // aumentare l'indice
@@ -87,7 +80,6 @@ rightArrow.addEventListener('click', function () {
 
 
 leftArrow.addEventListener('click', function () {
-	console.log('ciaooo')
     
     if(indicePhotoAttiva>0){
         let photoCorrente = photoCarosello[indicePhotoAttiva]
